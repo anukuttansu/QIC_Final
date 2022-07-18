@@ -4,14 +4,22 @@
   <listeners>
     <listener class-name="Common.TestJiraListner"/>
   </listeners>
-  <test thread-count="5" name="Test-NegativeLogin(failed)">
+  <test thread-count="5" name="Test-SuccessfulLogin_CreateMotorFleet(failed)">
     <classes>
-      <class name="TestFunctions.ApplicationLoginNegative">
+      <class name="TestFunctions.Underwriting_MotorFleet_FleetDirect">
         <methods>
+          <include name="CreateMotorIndividual"/>
+          <include name="tearDown"/>
           <include name="initDriver"/>
-          <include name="Login_Employee_NegativeValidation"/>
         </methods>
-      </class> <!-- TestFunctions.ApplicationLoginNegative -->
+      </class> <!-- TestFunctions.Underwriting_MotorFleet_FleetDirect -->
+      <class name="TestFunctions.ApplicationLogin">
+        <methods>
+          <include name="tearDown"/>
+          <include name="Login_Employee"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- TestFunctions.ApplicationLogin -->
     </classes>
-  </test> <!-- Test-NegativeLogin(failed) -->
+  </test> <!-- Test-SuccessfulLogin_CreateMotorFleet(failed) -->
 </suite> <!-- Failed suite [Suite] -->

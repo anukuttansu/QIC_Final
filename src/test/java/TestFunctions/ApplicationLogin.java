@@ -26,7 +26,7 @@ public class ApplicationLogin extends BaseClass {
 
 		LoginPage objects = new LoginPage(driver);
 		WriteExcelData report = new WriteExcelData();
-		report.SetStatus(2, "Status", "Not Executed");
+		report.SetStatus(1, "Status", "Not Executed");
 		wait = new WebDriverWait(driver, 10);
 		Thread.sleep(2000);
 		//wait.until(ExpectedConditions.elementToBeClickable(objects.LoginDrpDown()));
@@ -47,14 +47,14 @@ public class ApplicationLogin extends BaseClass {
 			Assert.assertEquals(getUsersName, prop.getProperty("ProfileName"));
 			System.out.println("Test case verification passed");
 			System.out.println("Employee named " +prop.getProperty("ProfileName")+" signed in into the application successfully" );
-			report.SetStatus(2, "Status", "Pass");
+			report.SetStatus(1, "Status", "Pass");
 		}
 		else
 		{
 			Assert.fail();
 			System.out.println("Test case verification failed");
 			System.out.println("User is unable to login into the application");
-			report.SetStatus(2, "Status", "Fail");
+			report.SetStatus(1, "Status", "Fail");
 		}
 		
 	}

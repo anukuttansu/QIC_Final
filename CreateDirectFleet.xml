@@ -4,15 +4,8 @@
 <listeners>
 		<listener class-name="Common.TestJiraListner" />
 	</listeners>
-  <test thread-count="5" name="Test-NegativeLogin">
-    <classes>
-      <class name="TestFunctions.ApplicationLandingPage"/>
-            <class name="TestFunctions.ApplicationLoginNegative"/>
-
-    </classes>
-  </test> <!-- Test -->
  
-  <test thread-count="5" name="Test-SuccessfulLogin_CreateMotorFleet">
+  <test thread-count="1" name="Test-SuccessfulLogin_CreateMotorFleet">
     <classes>
             <class name="TestFunctions.ApplicationLandingPage"/>
             <class name="TestFunctions.ApplicationLogin"/>

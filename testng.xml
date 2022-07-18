@@ -3,13 +3,17 @@
 <suite name="Suite">
 <listeners>
 		<listener class-name="Common.TestJiraListner" />
-		<listener class-name="Common.TestListener" />
 	</listeners>
-	
-  <test thread-count="5" name="Test-FailedTC_Sample">
+
+ 
+  <test thread-count="5" name="Test-SuccessfulLogin_CreateMotorFleet">
     <classes>
-      <class name="TestFunctions.ApplicationLandingPage"/>
-            <class name="TestFunctions.ApplicationLoginNegative_FailedSample"/>
+            <class name="TestFunctions.ApplicationLandingPage"/>
+            <class name="TestFunctions.ApplicationLogin"/>
+            <class name="TestFunctions.Underwriting_MotorFleet_FleetDirect"/>
+            <class name="TestFunctions.SelectPolicy"/>
+            <class name="TestFunctions.AdditionalInfo"/>
+            <class name="TestFunctions.EndPageVerification"/>
 
     </classes>
   </test> <!-- Test -->

@@ -37,7 +37,7 @@ public class TestJiraListner implements ITestListener {
 		if(isTiscketReady) {
 			//Raise a ticket
 			System.out.println("Bug is raised in Jira");
-			JiraServiceProvider sp = new JiraServiceProvider("https://vvsxilligence.atlassian.net/", "vishnu.vs@xilligence.com", "XlO6LAJj5ZiBKfTwxixED0CF", "DEM");
+			JiraServiceProvider sp = new JiraServiceProvider("https://vvsxilligence.atlassian.net/", "vishnu.vs@xilligence.com", "US3HQlxNUG6zyDGEVOfRB463", "DEM");
 			String issueSummary = result.getMethod().getConstructorOrMethod().getMethod().getName()+" got failed";
 			String issueDesc = result.getThrowable().getMessage()+"\n";
 			issueDesc.concat(ExceptionUtils.getFullStackTrace(result.getThrowable()));
